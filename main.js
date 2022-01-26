@@ -2,10 +2,11 @@ const input = document.querySelector(".text_write");
 const add_btn = document.querySelector(".add_btn");
 const list = document.querySelector(".list");
 
+// add버튼 눌렀을경우
 add_btn.addEventListener("click", () => {
   onAdd();
 });
-
+// 엔터키눌렀을경우
 input.addEventListener("keypress", (e) => {
   if (e.key !== "Enter") {
     input.focus();
@@ -24,6 +25,8 @@ function onAdd() {
   const item = createItem(text);
 
   list.appendChild(item);
+
+  item.scrollIntoView({ block: "center" });
 
   input.value = "";
   input.focus();
