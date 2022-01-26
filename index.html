@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>shopping List</title>
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -20,14 +20,9 @@
         <h1>Shopping List</h1>
       </header>
       <div id="list_container">
-        <ul class="list">
-          <li class="item">
-            <span>우유</span>
-            <button class="remove_btn"><i class="fas fa-trash-alt"></i></button>
-          </li>
-        </ul>
+        <ul class="list"></ul>
       </div>
-
+      <input type="text" class="text_write" maxlength="15" autofocus />
       <footer id="footer">
         <button class="add_btn">+</button>
       </footer>
