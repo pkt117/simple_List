@@ -3,6 +3,7 @@
   --color-white: #ffffff;
   --color-black: #000000;
   --color-light-pupple: #f2e4f4;
+  --color-red: red;
   /* size */
   --font-large: 22px;
   --font-medium: 18px;
@@ -76,6 +77,12 @@ body {
 }
 .remove_btn {
   background: transparent;
+  transition: all 300ms ease-in-out;
+}
+
+.remove_btn:hover {
+  transform: scale(1.1);
+  color: var(--color-red);
 }
 /* text_write */
 .text_write {
@@ -105,6 +112,12 @@ body {
   background: transparent;
   font-size: 30px;
   line-height: 50px;
+  transition: all 300ms ease-in;
+}
+
+.add_btn:hover {
+  transform: scale(1.3);
+  color: var(--color-red);
 }
 
 @media (max-width: 360px) {
