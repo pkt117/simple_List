@@ -84,16 +84,7 @@ body {
   transform: scale(1.1);
   color: var(--color-red);
 }
-/* text_write */
-.text_write {
-  width: 100%;
-  height: 5%;
-  border: none;
-  padding-left: 10px;
-}
-.text_write:focus {
-  outline: none;
-}
+
 /* footer */
 #footer {
   background: rgba(237, 193, 211);
@@ -104,7 +95,7 @@ body {
     rgba(127, 188, 242, 1) 100%
   );
   width: 100%;
-  height: 10%;
+  height: 15%;
   border-radius: 0 0 21px 21px;
   text-align: center;
 }
@@ -118,6 +109,16 @@ body {
 .add_btn:hover {
   transform: scale(1.3);
   color: var(--color-red);
+}
+
+.text_write {
+  width: 100%;
+  border: none;
+  padding: 5px 10px;
+  font-size: 16px;
+}
+.text_write:focus {
+  outline: none;
 }
 
 @media (max-width: 360px) {

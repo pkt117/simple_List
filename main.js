@@ -1,6 +1,7 @@
 const input = document.querySelector(".text_write");
 const add_btn = document.querySelector(".add_btn");
 const list = document.querySelector(".list");
+const form = document.querySelector(".new__form");
 
 // 리스트 아이템 추가
 function onAdd() {
@@ -40,16 +41,21 @@ function createItem(text) {
   return item_row;
 }
 
-// add버튼 눌렀을경우
-add_btn.addEventListener("click", () => {
-  onAdd();
-});
-// 엔터키눌렀을경우
-input.addEventListener("keypress", (e) => {
-  if (e.key !== "Enter") {
-    input.focus();
-    return;
-  }
+// // add버튼 눌렀을경우
+// add_btn.addEventListener("click", () => {
+//   onAdd();
+// });
+// // 엔터키눌렀을경우
+// input.addEventListener("keydown", (e) => {
+//   if (e.isComposing) return;
+//   if (e.key === "Enter") {
+//     onAdd();
+//   }
+// });
+
+// add버튼과 엔터키 동시에 처리 -> form의 submit
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
   onAdd();
 });
 
